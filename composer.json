@@ -60,6 +60,11 @@
         ],
         "format-php": [
             "vendor/bin/phpcbf"
+        ],
+        "start-project": [
+            "alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'",
+            "sail up",
+            "sail artisan migrate"
         ]
     },
     "extra": {

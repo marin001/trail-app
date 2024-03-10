@@ -1,5 +1,6 @@
 <?php
 
+use Doctrine\DBAL\Schema\Column;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,7 @@ return new class extends Migration
             $table->string('First name',255);
             $table->string('Last name',255);
             $table->string('Club',255)->nullable();
-            $table->foreignUuid('Race ID')->constrained(table: 'races', indexName: 'uuid');
+            $table->foreignUuid('Race ID')->constrained('races', 'uuid')->onUpdate('cascade')->onDelete('cascade');
         });
     }
     /**
