@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Race extends Model
 {
-    use HasUuids;
+    use HasUuids, HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -19,4 +20,7 @@ class Race extends Model
         'Distance',
     ];
 
+    protected $visible = ['id', 'Name', 'Distance'];
+
+    public $timestamps = false;
 }

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('races', function (Blueprint $table) {
-            $table->uuid()->primary();
+            $table->uuid('id')->primary();
             $table->string('Name',255);
             $table->enum('Distance',['5k','10k','HalfMarathon','Marathon']);
         });
