@@ -16,10 +16,10 @@ return new class extends Migration
 
         Schema::create('applications', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('First name',255);
-            $table->string('Last name',255);
+            $table->string('First_name',255);
+            $table->string('Last_name',255);
             $table->string('Club',255)->nullable();
-            $table->foreignUuid('Race ID')->constrained('races', 'id')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignUuid('Race_ID')->constrained('races', 'id')->onUpdate('cascade')->onDelete('cascade');
         });
     }
     /**

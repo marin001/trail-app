@@ -1,7 +1,3 @@
-Registration Page
-<br/>
-
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -14,6 +10,9 @@ Registration Page
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+
+<h1>Select user</h1>
+<h2>You will be redirected to route dependiong on role.</h2>
 <table>
 <th onclick="alert()">
         <td>First_name</td>
@@ -37,8 +36,9 @@ $users = User::factory()->count(5)->create();
 foreach($users as $user){
     ?>
 
-    <tr onclick="alert()">
+    <tr>
 
+        <td><?php print $user->id; ?></td>
         <td><?php print $user->First_name;?></td>
         <td><?php print $user->Last_name;?></td>
         <td><?php print $user->Email;?></td>

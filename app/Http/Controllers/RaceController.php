@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRaceRequest;
 use App\Http\Requests\UpdateRaceRequest;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class RaceController extends Controller
 {
@@ -33,6 +35,7 @@ class RaceController extends Controller
     public function index():Collection
     {
         return Race::all();
+
     }
 
 

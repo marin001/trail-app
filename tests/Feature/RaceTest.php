@@ -111,9 +111,10 @@ class RaceTest extends TestCase
 
         $race = Race::factory()->create();
         $data = [
-            'Name' => $race->Name.random_bytes(5),
+            'Name' => $race->Name.uniqid(),
             'Distance' => '5k'
         ];
+
 
         $response = $this->putJson('api/races/'. $race->id, $data);
 

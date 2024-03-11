@@ -15,13 +15,28 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::get('/register', function () {
-    return view('register');
+Route::get('/login', function () {
+    return view('login');
 });
+
+Route::get('/administrator', function () {
+    return view('administrator');
+});
+
+Route::get('/applicant', function () {
+    return view('applicant');
+});
+/*
+
+Route::post('/login', function () {
+    return view('registration_success');
+});*/
 
 Route::post('/register', function (Request $request) {
     return view('registration_success');
 });
+
+

@@ -13,12 +13,13 @@ return new class extends Migration
     {
         //
         Schema::create('users', function (Blueprint $table) {
-            $table->uuid()->primary();
-            $table->string('First name',255);
-            $table->string('Last name',255);
-            $table->string('E-mail',255);
+            $table->uuid('id')->primary();
+            $table->string('First_name',255);
+            $table->string('Last_name',255);
+            $table->string('Email',255);
             $table->integer('DOB');
             $table->enum('Role',['Applicant','Administrator']);
+            $table->string('remember_token',10);
         });
     }
 
