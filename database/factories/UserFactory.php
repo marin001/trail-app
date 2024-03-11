@@ -28,7 +28,7 @@ class UserFactory extends Factory
             'First_name' => fake()->name(),
             'Last_name' => fake()->name(),
             'Email' => fake()->unique()->safeEmail(),
-            'DOB' => rand(10,100),
+            'DOB' => rand(10, 100),
             'remember_token' => Str::random(10),
             'Role' => $this->faker->randomElement(['Administrator','Applicant'])
         ];

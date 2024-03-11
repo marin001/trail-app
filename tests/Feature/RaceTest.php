@@ -97,7 +97,6 @@ class RaceTest extends TestCase
                     'Distance' => $race->Distance
             ]);
         $response->assertStatus(201);
-
     }
 
 
@@ -120,6 +119,5 @@ class RaceTest extends TestCase
 
         $response->assertJsonFragment($data);
         $response->assertStatus(200);
-
     }
 }

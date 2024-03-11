@@ -35,7 +35,6 @@ class RaceController extends Controller
     public function index():Collection
     {
         return Race::all();
-
     }
 
 

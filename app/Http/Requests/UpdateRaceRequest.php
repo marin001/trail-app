@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class UpdateRaceRequest extends FormRequest
 {
@@ -11,6 +12,7 @@ class UpdateRaceRequest extends FormRequest
      */
     public function authorize(): bool
     {
+
         return true;
         //return $this->route('races')->user->id === auth()->id();
     }

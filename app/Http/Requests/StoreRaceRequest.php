@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class StoreRaceRequest extends FormRequest
 {
@@ -11,6 +12,17 @@ class StoreRaceRequest extends FormRequest
      */
     public function authorize(): bool
     {
+        /*
+        $user = auth()->user();
+
+        if('Administrator'===$user->Role){
+            return true;
+
+        }else{
+
+            return false;
+        }
+        */
         return true;
     }
 

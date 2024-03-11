@@ -111,8 +111,5 @@ class ApplicationTest extends TestCase
             'Race_ID' => $application->Race_ID
             ]);
         $response->assertStatus(201);
-
     }
-
-
 }

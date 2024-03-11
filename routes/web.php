@@ -29,14 +29,3 @@ Route::get('/administrator', function () {
 Route::get('/applicant', function () {
     return view('applicant');
 });
-/*
-
-Route::post('/login', function () {
-    return view('registration_success');
-});*/
-
-Route::post('/register', function (Request $request) {
-    return view('registration_success');
-});
-
-

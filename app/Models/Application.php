@@ -39,4 +39,3 @@ class Application extends Model
         return $this->belongsTo(Race::class);
     }
 }
-

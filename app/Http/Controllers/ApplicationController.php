@@ -17,10 +17,10 @@ class ApplicationController extends Controller
      * Display a listing of the resource.
      */
 
-     public function __construct(Application $application)
-     {
-         $this->application = $application;
-     }
+    public function __construct(Application $application)
+    {
+        $this->application = $application;
+    }
 
     public function index():Collection
     {
